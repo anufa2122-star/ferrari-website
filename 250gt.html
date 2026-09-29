@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ferrari 250 GTO</title>
 
     <style>
@@ -16,10 +17,7 @@
             color: gold;
         }
 
-        h1 {
-            color: goldenrod;
-        }
-
+        h1,
         h2 {
             color: goldenrod;
         }
@@ -32,6 +30,14 @@
 
         button {
             background-color: rgb(115, 9, 9);
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 2px solid goldenrod;
+        }
+
+        button:hover {
+            background-color: goldenrod;
             color: black;
         }
 
@@ -45,10 +51,21 @@
             text-align: center;
             color: silver;
             border: 2px solid goldenrod;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: goldenrod;
+            color: black;
         }
 
         td {
             background-color: #1a1a1a;
+        }
+
+        th,
+        td {
+            padding: 10px;
         }
 
         input {
@@ -66,16 +83,13 @@
 
         input[type="submit"]:hover {
             background-color: goldenrod;
+            color: black;
         }
 
         textarea {
             padding: 8px;
             border: 2px solid goldenrod;
-        }
-
-        th {
-            background-color: goldenrod;
-            color: black;
+            max-width: 90%;
         }
 
         p {
@@ -96,6 +110,7 @@
 
         /* Mobile view */
         @media (max-width: 600px) {
+
             h3 {
                 font-size: 16px;
                 padding: 15px 5px;
@@ -109,9 +124,13 @@
 
             table {
                 max-width: 100%;
+                font-size: 14px;
             }
 
-            input,
+            input {
+                max-width: 90%;
+            }
+
             textarea {
                 max-width: 90%;
             }
@@ -126,7 +145,7 @@
         <h3>
             <a href="index.html">HOME</a> |
             <a href="about.html">ABOUT FERRARI</a> |
-            <a href="Ferrari.html">COLLECTIONS</a> |
+            <a href="ferrari.html">COLLECTIONS</a> |
             <a href="features.html">FEATURES</a> |
             <a href="register.html">REGISTER</a> |
             <a href="index.html#contact">CONTACT</a>
@@ -138,7 +157,8 @@
 
         <h2>Ferrari 250 GTO</h2>
 
-        <img src="https://c4.wallpaperflare.com/wallpaper/754/233/147/3d-artwork-car-ferrari-wallpaper-preview.jpg"
+        <img
+            src="https://c4.wallpaperflare.com/wallpaper/754/233/147/3d-artwork-car-ferrari-wallpaper-preview.jpg"
             alt="Ferrari 250 GTO"
             width="400"
             height="300">
@@ -161,7 +181,7 @@
 
         <h2>Car Details</h2>
 
-        <table border="1" cellpadding="10">
+        <table border="1">
 
             <tr>
                 <th>Model</th>
@@ -194,13 +214,31 @@
 
         <h2>Book Your Ferrari 250 GTO</h2>
 
-        <p>Please fill in your details to request a booking.</p>
+        <p>
+            Click the button below to request a booking.
+        </p>
+
+        <!-- BOOK NOW BUTTON -->
+        <a href="Booking.html">
+            <button>BOOK NOW</button>
+        </a>
+
+        <br><br>
+
+        <hr>
+
+        <h2>Quick Booking Form</h2>
+
+        <p>
+            You can also fill in your details here.
+        </p>
 
         <form id="bookingForm" action="thankyou.html">
 
             <label>Name:</label>
 
-            <input type="text"
+            <input
+                type="text"
                 id="name"
                 placeholder="Enter your name">
 
@@ -210,7 +248,8 @@
 
             <label>Email:</label>
 
-            <input type="email"
+            <input
+                type="email"
                 id="email"
                 placeholder="Enter your email">
 
@@ -218,7 +257,8 @@
 
             <label>Phone:</label>
 
-            <input type="tel"
+            <input
+                type="tel"
                 id="phone"
                 placeholder="Enter your phone number">
 
@@ -226,7 +266,10 @@
 
             <label>Booking Date:</label>
 
-            <input type="date" required>
+            <input
+                type="date"
+                id="bookingDate"
+                required>
 
             <br><br>
 
@@ -234,13 +277,15 @@
 
             <br>
 
-            <textarea rows="4"
+            <textarea
+                rows="4"
                 cols="35"
                 placeholder="Enter your message"></textarea>
 
             <br><br>
 
-            <input type="submit"
+            <input
+                type="submit"
                 id="bookButton"
                 value="Confirm Booking">
 
@@ -250,7 +295,8 @@
 
         <br><br>
 
-        <a href="Ferrari.html">
+        <!-- BACK TO COLLECTIONS -->
+        <a href="ferrari.html">
             <button>BACK TO FERRARI CARS</button>
         </a>
 
