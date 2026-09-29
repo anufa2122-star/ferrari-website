@@ -4,208 +4,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ferrari Registration</title>
 
     <style>
-        body{
-            background-color:black;
-            color:white;
+        body {
+            background-color: black;
+            color: white;
         }
 
-        h1{
-            color:goldenrod;
-            padding:20px;
+        a {
+            color: gold;
         }
 
-        table{
-            text-align:center;
-            color:silver;
-            border:2px solid goldenrod;
-        }
-         h3{
-            text-align:center;
-            padding:20px;
-            color:goldenrod;
+        h1 {
+            color: goldenrod;
         }
 
-        th{
-            background-color:goldenrod;
-            color:black;
-            padding:10px;
+        h2 {
+            color: goldenrod;
         }
 
-        td{
-            background-color:#1a1a1a;
-            padding:10px;
+        h3 {
+            text-align: center;
+            padding: 20px;
+            color: goldenrod;
         }
 
-        input{
-            padding:8px;
-            border:2px solid goldenrod;
+        p {
+            color: silver;
+            text-align: center;
         }
 
-        select{
-            padding:8px;
-            border:2px solid goldenrod;
+        label {
+            color: silver;
         }
 
-        textarea{
-            padding:8px;
-            border:2px solid goldenrod;
+        input,
+        select,
+        textarea {
+            padding: 8px;
+            border: 2px solid goldenrod;
+            background-color: #1a1a1a;
+            color: white;
         }
 
-        input[type="submit"]{
-            background-color:rgb(115, 9, 9);
-            color:white;
-            padding:10px 20px;
-            border:2px solid goldenrod;
+        input[type="submit"] {
+            background-color: rgb(115, 9, 9);
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 2px solid goldenrod;
         }
 
-        input[type="reset"]{
-            background-color:rgb(115, 9, 9);
-            color:white;
-            padding:10px 20px;
-            border:2px solid goldenrod;
+        input[type="submit"]:hover {
+            background-color: goldenrod;
+            color: black;
         }
-      
 
-h3{
-    text-align:center;
-    padding:20px;
-    color:goldenrod;
-}
+        table {
+            border: 2px solid goldenrod;
+            padding: 20px;
+            color: silver;
+            background-color: #1a1a1a;
+        }
 
-h3 a{
-    color:goldenrod !important;
-}
+        td {
+            padding: 10px;
+        }
 
+        #successMessage {
+            color: gold;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
 
+        button {
+            background-color: rgb(115, 9, 9);
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid goldenrod;
+        }
     </style>
-
 </head>
 
 <body>
-    <h3>
-    <a href="index.html">HOME</a> |
-    <a href="about.html">ABOUT FERRARI</a> |
-    <a href="Ferrari.html">COLLECTIONS</a> |
-    <a href="features.html">FEATURES</a> |
-    <a href="register.html">REGISTER</a> |
-    <a href="index.html#contact">CONTACT</a>
-</h3>
 
-<center>
+    <center>
 
-    <h1>FERRARI REGISTRATION ♞</h1>
+        <h3>
+            <a href="index.html">HOME</a> |
+            <a href="about.html">ABOUT FERRARI</a> |
+            <a href="ferrari.html">COLLECTIONS</a> |
+            <a href="features.html">FEATURES</a> |
+            <a href="register.html">REGISTER</a> |
+            <a href="index.html#contact">CONTACT</a>
+        </h3>
 
-    <form action="thankyou.html">
+        <hr>
 
-        <table border="1">
+        <h1>FERRARI ♞</h1>
 
-            <tr>
-                <th>Name</th>
-                <td>
-                    <input type="text"
-                           placeholder="Enter your name"
-                           required>
-                </td>
-            </tr>
+        <h2>Register with Ferrari</h2>
 
-            <tr>
-                <th>Email</th>
-                <td>
-                    <input type="email"
-                           placeholder="Enter your email"
-                           required>
-                </td>
-            </tr>
+        <p>
+            Create your Ferrari account and stay connected with
+            the world of Ferrari.
+        </p>
 
-            <tr>
-                <th>Mobile Number</th>
-                <td>
-                    <input type="number"
-                           placeholder="Enter your mobile number"
-                           required>
-                </td>
-            </tr>
+        <br>
 
-            <tr>
-                <th>Password</th>
-                <td>
-                    <input type="password"
-                           placeholder="Enter your password"
-                           required>
-                </td>
-            </tr>
+        <form id="registerForm">
 
-            <tr>
-                <th>Gender</th>
-                <td>
-                    <input type="radio"
-                           name="gender"
-                           value="male"
-                           required> Male
+            <table>
 
-                    <input type="radio"
-                           name="gender"
-                           value="female"> Female
+                <tr>
+                    <td>
+                        <label>Name:</label>
+                    </td>
 
-                    <input type="radio"
-                           name="gender"
-                           value="other"> Other
-                </td>
-            </tr>
+                    <td>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name">
+                    </td>
+                </tr>
 
-            <tr>
-                <th>Select Ferrari Model</th>
-                <td>
-                    <select>
-                        <option>Ferrari 296 GTB</option>
-                        <option>Ferrari Roma</option>
-                        <option>Ferrari SF90 Stradale</option>
-                        <option>Ferrari Purosangue</option>
-                    </select>
-                </td>
-            </tr>
 
-            <tr>
-                <th>Country</th>
-                <td>
-                    <select>
-                        <option>India</option>
-                        <option>Italy</option>
-                        <option>United Kingdom</option>
-                        <option>United States</option>
-                    </select>
-                </td>
-            </tr>
+                <tr>
+                    <td>
+                        <label>Email:</label>
+                    </td>
 
-            <tr>
-                <th>Address</th>
-                <td>
-                    <textarea rows="4"
-                              cols="30"
-                              placeholder="Enter your address"></textarea>
-                </td>
-            </tr>
+                    <td>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email">
+                    </td>
+                </tr>
 
-            <tr>
-                <td colspan="2" align="center">
 
-                    <input type="submit"
-                           value="Register">
+                <tr>
+                    <td>
+                        <label>Phone:</label>
+                    </td>
 
-                    <input type="reset"
-                           value="Reset">
+                    <td>
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number">
+                    </td>
+                </tr>
 
-                </td>
-            </tr>
 
-        </table>
+                <tr>
+                    <td>
+                        <label>Password:</label>
+                    </td>
 
-    </form>
+                    <td>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create a password">
+                    </td>
+                </tr>
 
-</center>
+
+                <tr>
+                    <td>
+                        <label>Country:</label>
+                    </td>
+
+                    <td>
+                        <select id="country">
+
+                            <option value="">
+                                Select Country
+                            </option>
+
+                            <option value="India">
+                                India
+                            </option>
+
+                            <option value="Italy">
+                                Italy
+                            </option>
+
+                            <option value="USA">
+                                USA
+                            </option>
+
+                            <option value="UK">
+                                United Kingdom
+                            </option>
+
+                        </select>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label>Message:</label>
+                    </td>
+
+                    <td>
+                        <textarea
+                            id="message"
+                            rows="4"
+                            cols="25"
+                            placeholder="Enter your message"></textarea>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" align="center">
+
+                        <input
+                            type="submit"
+                            value="REGISTER">
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+
+        <p id="successMessage"></p>
+
+        <br>
+        <br>
+
+        <a href="index.html">
+            <button>BACK TO HOME</button>
+        </a>
+
+    </center>
+
+
+    <script>
+
+        const registerForm =
+            document.getElementById("registerForm");
+
+        const nameInput =
+            document.getElementById("name");
+
+        const emailInput =
+            document.getElementById("email");
+
+        const phoneInput =
+            document.getElementById("phone");
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const countryInput =
+            document.getElementById("country");
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+
+        registerForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            if (nameInput.value === "") {
+
+                alert("Please enter your name");
+
+            }
+
+            else if (/\d/.test(nameInput.value)) {
+
+                alert("Please enter a valid name");
+
+            }
+
+            else if (emailInput.value === "") {
+
+                alert("Please enter your email");
+
+            }
+
+            else if (!emailInput.value.includes("@")) {
+
+                alert("Please enter a valid email");
+
+            }
+
+            else if (phoneInput.value === "") {
+
+                alert("Please enter your phone number");
+
+            }
+
+            else if (passwordInput.value === "") {
+
+                alert("Please create a password");
+
+            }
+
+            else if (countryInput.value === "") {
+
+                alert("Please select your country");
+
+            }
+
+            else {
+
+                successMessage.innerHTML =
+                    "Registration successful! Welcome to Ferrari 🏎️";
+
+                registerForm.reset();
+
+            }
+
+        });
+
+    </script>
 
 </body>
+
 </html>
